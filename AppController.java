@@ -45,8 +45,8 @@ public class AppController {
 	@PostMapping("/pdf/Fardeen_Mirza")
 	public ResponseEntity<InputStreamResource> downloadPDFResource() throws IOException{
 
-		BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIARV27XLBUGYVFDYU4", "oaCZbmtpBzAvZXuFZ88iB2Ryj+HDnjQckn1YohU+");
-		AmazonS3 s3Client = AmazonS3ClientBuilder.standard().withRegion("us-east-2").withCredentials(new AWSStaticCredentialsProvider(awsCreds))
+		BasicAWSCredentials awsCreds = new BasicAWSCredentials("here you will put your key", "here id");
+		AmazonS3 s3Client = AmazonS3ClientBuilder.standard().withRegion("here ypur location").withCredentials(new AWSStaticCredentialsProvider(awsCreds))
 				.build();
 		String bucketName = "downloadcv";
 		String folderName = "cv";
